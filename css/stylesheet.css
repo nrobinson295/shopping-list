@@ -1,0 +1,73 @@
+/* stylesheet */
+
+/* possibly a background image covering the whole page */
+
+/* shopping list center of the page large font size */
+header {
+	text-align: center;
+	font-size: 50px;
+	padding-top: 120px;
+	padding-bottom: 20px;
+}
+
+
+/* nav bar will have the add button then a text/type area to allow clients to type their items in, 
+then next to that will be another text/type area that will allow users to add a price amount for said item.
+next to that will be a quantity option. */
+nav {
+	display: inline-flex;
+	justify-content: center;
+	width: 100%;
+}
+.price, .quantity {
+	width: 33%;
+}
+button {
+	margin: 0 20px 0 20px;
+}
+
+
+/* user list section
+list will show user entered items along with price and quantity
+also will have a trashcan at the end of each item so user can remove unwanted items
+when an item is selected i line will cross out selected item, item will also then be added to cart */
+.list {
+	text-align: center;
+	font-size: 50px;
+	padding-top: 20px;
+}
+p {
+	text-align: center;
+}
+.list-container > .selected {
+	text-decoration: line-through;
+}
+
+
+
+
+/* user cart section 
+will show selected items with total price for said item and quantity of that item
+there will also be a trashcan option on each item for removal
+at the bottom of the list will be a 'total=' to show the total amount of all items in cart */
+.cart {
+	text-align: center;
+	font-size: 50px;
+	padding-top: 20px;
+}
+.total {
+	text-align: center;
+	font-size: 25px;
+	padding-top: 20px;
+	padding-right: 140px;
+}
+
+
+
+
+
+
+
+
+
+
