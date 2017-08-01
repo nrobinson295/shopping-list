@@ -1,4 +1,4 @@
-"<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -10,16 +10,29 @@
 <header class="shopping-list">Shopping List</header>
 	<nav class="nav-bar">
 		<button class="add">Add</button>
-		<h1>Price</h1>
-		<h2>Quantity</h2>
+		<div class="price">Price</div>
+		<div class="quantity">Quantity</div>
 	</nav>	
-	<div class="list">
-	
+	<div class="list-container">
+		<div class="list">List</div>
+		<div class="selected">
+			<p>eggs</p>
+			<p>milk</p>
+		</div>
+		<div class="unselected">
+			<p>bread</p>
+			<p>drinks</p>
+			<p>pizza</p>
+		</div>
 	</div>
-	<div class="cart">
-		
+	<div class="cart-container">
+		<div class="cart">Cart</div>
+		<p>eggs</p>
+		<p>milk</p>
+		<div class="total">Total =</div>
 	</div>
 
+	<script src="http://code.jquery.com/jquery.min.js"></script>
 	<script type="text/javascript" src="jquery/app.js"></script>
 </body>
-</html>"
+</html>
