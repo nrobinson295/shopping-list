@@ -5,41 +5,65 @@ $(document).ready(function() {
             price input box 
             add button (runs addItemToList) */
     var list = [];
-
+    $('button').click(function() {
+		var name = $('.txt-item-name').val();
+		var price = $('.txt-item-price').val();
+		addItemToList(name, price);
+		console.log(name, price);	
+	});
+    function showListItems(listItems){
+ 		listItems.forEach(function(item){
+ 			var newItem = $('<li><div class="item-name">' + item.name + '</div><div class="item-price">' + item.price + '</div></li>');
+ 			if(item.selected == true){
+ 				newItem.addClass('selected');
+ 			}
+ 			newItem.click(function(){
+	 			toggleItem(item);	
+ 			})
+ 			$('.list').append(newItem);
+ 		})
+	}
+    function toggleItem(item){
+		//get the item thats clicked
+        if(item.selected == false){           
+            item.selected = true
+        } else if(item.selected == true){
+            item.selected = false 
+        }
+        	console.log(item)
+        //updateTotal
+        refreshEverything();
+ 	}
+    function refreshEverything(){
+    	$('.list').empty()
+    	showListItems(list);	
+    }
     function addItemToList(name, price){
     	var item = {
     		name: name,
-    		price: price
+    		price: price,
+    		selected: false
     	};
     	list.push(item);
     	console.log(list);
-    	$('.list').append('<li><div class="item-name">' + name + '</div><div class="item-price">' + price + '</div></li>');
-   			
+    	refreshEverything();		
     }
-
-       	$('.list').click(function(item){
-    		//var item.selected = $('.li')
-    		// i think i need a var or need to make a function to run the if/else statement
-    		if (item.selected == false) {
-    			item.selected = true
-    		}
-    		else if (item.selected == true) {
-    			item.selected = false
-    		}
-    		console.log('list');
-    	})
+    // updateTotal(listItems)
+    //         set total to 0
+    //         for each thing in listItems
+    //             if(item.selected == true)                
+    //             add the price to total
+            
+            
+    //     showTotal
+    //         set the html of #ViewTotal to total    	
     
 
 
 
 
 
-	$('button').click(function() {
-		var name = $('.txt-item-name').val();
-		var price = $('.txt-item-price').val();
-		addItemToList(name, price);
-		console.log(name, price);	
-	});
+	
 });
 /*        #ListView
         List View 
@@ -65,28 +89,9 @@ remove
             bind it to a click event that runs
                 toggleItem 
 
-        toggleItem(item)
-            get the item thats clicked
-            if(item.selected == false)              
-                {           
-                item.selected = true
-            } else if(item.selected == true){
-                item.selected = false 
-            }
+        
 
-            updateTotal
-            refreshEverything
-
-
-        updateTotal(listItems)
-            set total to 0
-            for each thing in listItems
-                if(item.selected == true)                
-                add the price to total
-            
-            
-        showTotal
-            set the html of #ViewTotal to total 
+        
 
         refreshEverything()
             showItems(listItems)
