@@ -26,7 +26,15 @@ nav {
 button {
 	margin: 0 20px 0 20px;
 }
-
+ul {
+	overflow: hidden;
+	padding: 0;
+	list-style-type: none;
+	display: inline;
+}
+ul.list {
+	flex-direction: row; 
+}
 
 
 /* user list section
@@ -40,6 +48,7 @@ when an item is selected i line will cross out selected item, item will also the
 }
 li {
 	text-align: center;
+
 }
 .list-container .selected {
 	text-decoration: line-through;

@@ -36,7 +36,9 @@ $(document).ready(function() {
  	}
     function refreshEverything(){
     	$('.list').empty()
-    	showListItems(list);	
+    	showListItems(list);
+    	var updatedTotal = updateTotal(list);
+    	showTotal(updatedTotal);	
     }
     function addItemToList(name, price){
     	var item = {
@@ -50,15 +52,27 @@ $(document).ready(function() {
     }
     // updateTotal(listItems)
     //         set total to 0
+    function updateTotal(listItems){
+   		var total = 0;
+   		listItems.forEach(function(item){
+ 			
+ 			if(item.selected == true){
+ 				total = total + Number(item.price);
+ 			}
+ 			
+ 		})
     //         for each thing in listItems
     //             if(item.selected == true)                
     //             add the price to total
-            
-            
+            console.log(total);
+            return total;
+    }     
     //     showTotal
     //         set the html of #ViewTotal to total    	
-    
-
+    function showTotal(totalNumber){
+    	$('.total-value').html(totalNumber)
+    }
+    //$('li').css('flex-direction', 'row');
 
 
 
