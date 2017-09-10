@@ -19,21 +19,20 @@ nav {
 	justify-content: center;
 	width: 100%;
 }
-
-.txt-item-price {
-	width: 72px;
-}
 button {
 	margin: 0 20px 0 20px;
 }
 ul {
-	overflow: hidden;
 	padding: 0;
 	list-style-type: none;
-	display: inline;
+	text-align: center;
+	width: 325px;
+	margin: auto;
 }
-ul.list {
-	flex-direction: row; 
+li {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 
@@ -46,11 +45,7 @@ when an item is selected i line will cross out selected item, item will also the
 	font-size: 50px;
 	padding-top: 20px;
 }
-li {
-	text-align: center;
-
-}
-.list-container .selected {
+.list .selected {
 	text-decoration: line-through;
 }
 
