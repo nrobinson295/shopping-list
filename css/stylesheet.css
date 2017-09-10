@@ -19,27 +19,38 @@ nav {
 	justify-content: center;
 	width: 100%;
 }
-.price, .quantity {
-	width: 5%;
-}
 button {
 	margin: 0 20px 0 20px;
 }
+ul {
+	padding: 0;
+	list-style-type: none;
+	text-align: center;
+	width: 325px;
+	margin: auto;
+}
+li {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
 
 
 /* user list section
 list will show user entered items along with price and quantity
 also will have a trashcan at the end of each item so user can remove unwanted items
 when an item is selected i line will cross out selected item, item will also then be added to cart */
-.list {
+
+.list-header {
+
 	text-align: center;
 	font-size: 50px;
 	padding-top: 20px;
 }
-p {
-	text-align: center;
-}
-.list-container > .selected {
+
+.list .selected {
+
 	text-decoration: line-through;
 }
 
@@ -50,16 +61,12 @@ p {
 will show selected items with total price for said item and quantity of that item
 there will also be a trashcan option on each item for removal
 at the bottom of the list will be a 'total=' to show the total amount of all items in cart */
-.cart {
-	text-align: center;
-	font-size: 50px;
-	padding-top: 20px;
-}
+
+
 .total {
 	text-align: center;
 	font-size: 25px;
 	padding-top: 20px;
-	padding-right: 140px;
 }
 
 
