@@ -1,0 +1,36 @@
+{
+  "name": "shopping-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nrobinson295/shopping-list.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nrobinson295/shopping-list/issues"
+  },
+  "homepage": "https://github.com/nrobinson295/shopping-list#readme",
+  "dependencies": {
+    "@angular/common": "^6.0.6",
+    "@angular/compiler": "^6.0.6",
+    "@angular/core": "^6.0.6",
+    "@angular/forms": "^6.0.6",
+    "@angular/platform-browser": "^6.0.6",
+    "@angular/platform-browser-dynamic": "^6.0.6",
+    "jquery": "^3.3.1",
+    "reflect-metadata": "^0.1.12",
+    "rxjs": "^6.2.1",
+    "webpack": "^4.12.0",
+    "zone.js": "^0.8.26"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.0.8"
+  }
+}
