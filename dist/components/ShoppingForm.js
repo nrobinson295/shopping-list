@@ -7,9 +7,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 import { Component } from '@angular/core';
 let ShoppingForm = class ShoppingForm {
     constructor() {
-        this.price = 0;
+        this.list = new Set();
     }
-    addItem() { }
+    addItem() {
+        this.list.add(this.name);
+        this.name = '';
+    }
+    removeItem(item) {
+        this.list.delete(item);
+    }
+    trackByFn(index) {
+        return index;
+    }
 };
 ShoppingForm = __decorate([
     Component({
@@ -20,11 +29,14 @@ ShoppingForm = __decorate([
 				<button type="submit">Add</button>
 				<input name="name" [(ngModel)]="name" type="text" placeholder="enter text here" class="txt-item-name" required>
 			</div>
-			<div class="price">Price
-				<input name="price" [(ngModel)]="price" type="number" name="price" placeholder="$" class="txt-item-price" required>
-			</div>
-
+			
 		</form>
+		<div class="list-container">
+			<div class="list-header">List</div>
+			<ul class="list" *ngFor="let item of list | setToArray">
+				<shopping-list-item [item]="item" (removeItem)="removeItem($event)"></shopping-list-item>				
+			</ul>
+		</div>
 	`
     })
 ], ShoppingForm);
