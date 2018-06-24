@@ -5,7 +5,7 @@ export interface SearchRecipeResponse {
 export interface RecipeModel {
 	id: number;
 	title: string;
-	readInMinutes: number;
+	readyInMinutes: number;
 	servings: number;
 	image: string;
 	imageUrls: string[];

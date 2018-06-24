@@ -67,3 +67,7 @@ export const RecipeOptions = {
 	Allergies,
 	Type
 };
+
+export function enumToArray(item: any): string[] {
+	return Object.keys(item).map(key => item[key]);
+}
