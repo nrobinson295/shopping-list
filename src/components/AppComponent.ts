@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-	selector: 'recipe-app',
+	selector: "recipe-app",
 	template: `
 		<h1 class="recipe">Recipe</h1>
 		<recipe-form></recipe-form>
