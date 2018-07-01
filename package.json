@@ -1,42 +1,41 @@
 {
-  "name": "shopping-list",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "tsc && webpack && node_modules/.bin/node-sass sass/index.scss dist/style.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nrobinson295/shopping-list.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nrobinson295/shopping-list/issues"
-  },
-  "homepage": "https://github.com/nrobinson295/shopping-list#readme",
-  "dependencies": {
-    "@angular/common": "^6.0.7",
-    "@angular/compiler": "^6.0.7",
-    "@angular/core": "^6.0.7",
-    "@angular/forms": "^6.0.7",
-    "@angular/platform-browser": "^6.0.7",
-    "@angular/platform-browser-dynamic": "^6.0.7",
-    "@angular/router": "^6.0.7",
-    "jquery": "^3.3.1",
-    "rapidapi-connect": "0.0.6",
-    "reflect-metadata": "^0.1.12",
-    "rxjs": "^6.2.1",
-    "webpack": "^4.14.0",
-    "zone.js": "^0.8.26"
-  },
-  "devDependencies": {
-    "@types/node": "^10.5.1",
-    "webpack": "^4.13.0",
-    "node-sass": "^4.9.0",
-    "webpack-cli": "^3.0.8"
-  }
- 
+	"name": "shopping-list",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build": "tsc && node_modules/.bin/webpack && node_modules/.bin/node-sass sass/MainIndex.scss dist/style.css",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nrobinson295/shopping-list.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/nrobinson295/shopping-list/issues"
+	},
+	"homepage": "https://github.com/nrobinson295/shopping-list#readme",
+	"dependencies": {
+		"@angular/common": "^6.0.7",
+		"@angular/compiler": "^6.0.7",
+		"@angular/core": "^6.0.7",
+		"@angular/forms": "^6.0.7",
+		"@angular/platform-browser": "^6.0.7",
+		"@angular/platform-browser-dynamic": "^6.0.7",
+		"@angular/router": "^6.0.7",
+		"jquery": "^3.3.1",
+		"rapidapi-connect": "0.0.6",
+		"reflect-metadata": "^0.1.12",
+		"rxjs": "^6.2.1",
+		"webpack": "^4.13.0",
+		"zone.js": "^0.8.26"
+	},
+	"devDependencies": {
+		"@types/node": "^10.5.1",
+		"webpack": "^4.13.0",
+		"node-sass": "^4.9.0",
+		"webpack-cli": "^3.0.8"
+	}
 }
