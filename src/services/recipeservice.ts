@@ -37,7 +37,7 @@ export class RecipeService {
 			);
 	}
 
-	getInstructions(id: number): Observable<Instructions[]> {
+	getInstructions(id: string): Observable<Instructions[]> {
 		return this.http.get<Instructions[]>(
 			`https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/${id}/analyzedInstructions`,
 			{

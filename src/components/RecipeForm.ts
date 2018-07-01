@@ -30,11 +30,8 @@ import { enumToArray } from '../models/RecipeOptions';
 		</div>
 		<div>
 			<label for="allergy">allergy</label>
-			<select id="allergy"
-			[(ngModel)]="options.allergy" name="allergy">
-				<option value="">None</option>
-				<option *ngFor="let allergy of allergies" [value]="allergy">{{allergy}}</option>
-			</select>
+			<checkboxes [options]="allergies" (optionsChange)="options.allergies=$event"></checkboxes> 
+			
 
 		</div>
 		<div>
@@ -46,15 +43,13 @@ import { enumToArray } from '../models/RecipeOptions';
 			</select>
 
 		</div>
-		<div *ngFor="let recipe of recipes">
+		<div *ngFor="let recipe of recipes" [routerLink]="['recipe',recipe.id]">
 			<img [src]="recipe.image">
 			<h1>{{recipe.title}}</h1>
 			<small>Ready in {{recipe.readyInMinutes}} minutes</small>
 			<small>Serving size {{recipe.servings}}</small>
 		</div>
 	</form>
-	
-	
 	`
 })
 export class RecipeForm {
