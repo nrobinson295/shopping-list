@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc && webpack",
+    "build": "tsc && webpack && node_modules/.bin/node-sass sass/index.scss dist/style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,6 +24,7 @@
     "@angular/forms": "^6.0.7",
     "@angular/platform-browser": "^6.0.7",
     "@angular/platform-browser-dynamic": "^6.0.7",
+    "@angular/router": "^6.0.7",
     "jquery": "^3.3.1",
     "rapidapi-connect": "0.0.6",
     "reflect-metadata": "^0.1.12",
@@ -33,6 +34,9 @@
   },
   "devDependencies": {
     "@types/node": "^10.5.1",
+    "webpack": "^4.13.0",
+    "node-sass": "^4.9.0",
     "webpack-cli": "^3.0.8"
   }
+ 
 }
